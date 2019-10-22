@@ -1,0 +1,31 @@
+// ConsoleApplication13.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+void swapThemByVal(float num1, float num2) {
+	int temp = num1;
+	num1 = num2;
+	num2 = temp;
+}
+
+void swapThemByRef(float& num1, float& num2) {
+	int temp = num1;
+	num1 = num2;
+	num2 = temp;
+}
+
+int main() {
+	float i , j ;
+	cout << "please enter 2 numbers\n";
+	cin >>i>> j;
+	swapThemByVal(i, j);
+	cout << i << "  " << j <<endl;     // displays 10  20
+	swapThemByRef(i, j);
+	cout << i << "  " << j <<endl;     // displays 20  10
+	system("pause");
+	return 0;
+}
+
